@@ -1,0 +1,64 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <h1 style="text-align: center;">List of products</h1>
+
+
+
+  <br>
+  <br>
+  <br>
+  <a routerLink="/create">
+    <button class="btn btn-success">Create Product</button>
+
+  </a>
+
+
+  <table class = "table table-striped" >
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th> Description </th>
+      <th>Price</th>
+      <th> Actions </th>
+    </tr>
+    </thead>
+
+
+    <tbody>
+    <tr *ngFor="let prod of products">
+
+      <td>
+        {{prod.title}}
+
+      </td>
+
+      <td>
+        {{prod.description}}
+
+      </td>
+
+      <td>
+        {{prod.price}}
+
+      </td>
+
+
+      
+
+    <td>
+
+
+      <button class="btn btn-info"(click)="goToUpdateComponent(prod._id)" >Update</button>
+      <button class="btn btn-danger" (click)="deleteProduct(prod._id)">Delete</button>
+      <button class="btn btn-success" (click)="gotoDetailComponent(prod._id)">View</button>
+
+    </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

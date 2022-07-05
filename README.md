@@ -1,4 +1,0 @@
-# CrudNestJs
-# CrudNestJs
-# CrudNestJsProduct
-# CrudNestJsProduct
